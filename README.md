@@ -9,7 +9,7 @@ A QuickMenu API inspired by UiExpansionKit, and partially based on ReModCE's fir
 ## QuickStart
 
 Download the latest [Release](https://github.com/RinLovesYou/QuickMenuLib/releases) and place it in your `Mods` folder
-then Reference the dll in your project
+then reference the dll in your project
 
 Create a Class that Inherits from ModMenu.
 ```cs
