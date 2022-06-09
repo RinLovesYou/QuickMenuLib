@@ -60,7 +60,7 @@ namespace QuickMenuLib.UI
         {
             get
             {
-                _leftWing = Wings.FirstOrDefault(w => w._wingType == VRC.UI.Shared.WingType.Left);
+                _leftWing = Wings.FirstOrDefault(w => w.field_Public_WingPanel_0 == Wing.WingPanel.Left);
                 return _leftWing;
             }
         }
@@ -69,7 +69,7 @@ namespace QuickMenuLib.UI
         {
             get
             {
-                _rightWing = Wings.FirstOrDefault(w => w._wingType == VRC.UI.Shared.WingType.Right);
+                _rightWing = Wings.FirstOrDefault(w => w.field_Public_WingPanel_0 == Wing.WingPanel.Right);
                 return _rightWing;
             }
         }

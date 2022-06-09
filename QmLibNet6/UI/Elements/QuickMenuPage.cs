@@ -111,7 +111,7 @@ namespace QuickMenuLib.UI.Elements
             }
             else
             {
-                QuickMenuExtensions.MenuStateController.PushPage(MyPage.name);
+                QuickMenuExtensions.MenuStateController.Method_Public_Void_String_UIContext_Boolean_0(MyPage.name);
             }
 
             OnOpen?.Invoke();

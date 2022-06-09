@@ -6,8 +6,6 @@ using System.Reflection;
 using UnhollowerBaseLib.Attributes;
 using UnhollowerRuntimeLib.XrefScans;
 using UnityEngine;
-using VRC.UI.Core;
-using VRC.UI.Elements;
 
 namespace QuickMenuLib
 {
@@ -27,23 +25,6 @@ namespace QuickMenuLib
             var rootObject = GameObject.Find($"/{split[0]}")?.transform;
             if (rootObject == null) return null;
             return Transform.FindRelativeTransformWithPath(rootObject, split[1], false)?.gameObject;
-        }
-
-        //https://github.com/RequiDev/ReMod.Core/blob/0aee9df96e38e3f4e49fc3c96a4c78c0c3db8578/VRChat/VrcUiExtensions.cs#L50
-        private delegate void PushPageDelegate(MenuStateController menuStateCtrl, string pageName, UIContext uiContext,
-            bool clearPageStack, UIPage.TransitionType transitionType);
-        private static PushPageDelegate _pushPage;
-
-        public static void PushPage(this MenuStateController menuStateCtrl, string pageName, UIContext uiContext = null,
-            bool clearPageStack = false, UIPage.TransitionType transitionType = UIPage.TransitionType.Right)
-        {
-            if (_pushPage == null)
-            {
-                _pushPage = (PushPageDelegate)Delegate.CreateDelegate(typeof(PushPageDelegate),
-                    typeof(MenuStateController).GetMethods().FirstOrDefault(m => m.GetParameters().Length == 4 && m.Name.StartsWith("Method_Public_Void_String_UIContext_Boolean_TransitionType_") && CheckMethod(m, "No page named")));
-            }
-
-            _pushPage(menuStateCtrl, pageName, uiContext, clearPageStack, transitionType);
         }
 
         public static bool CheckMethod(MethodInfo method, string match)

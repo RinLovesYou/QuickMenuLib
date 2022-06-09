@@ -13,5 +13,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.3.0.0")]
 [assembly: AssemblyFileVersion("1.3.0.0")]
 
-[assembly:MelonInfo(typeof(QuickMenuLib.QuickMenuLibMod), "QuickMenuLib", "1.4.0", "RinLovesYou")]
+[assembly:MelonInfo(typeof(QuickMenuLib.QuickMenuLibMod), "QuickMenuLib", "1.6.0", "RinLovesYou")]
 [assembly:MelonGame("VRChat", "VRChat")]
+[assembly:MelonPriority(int.MinValue)]

@@ -69,7 +69,7 @@ namespace QuickMenuLib.UI.Elements
 
         public void Open()
         {
-            MyWing.field_Private_MenuStateController_0.PushPage(MyName);
+            MyWing.field_Private_MenuStateController_0.Method_Public_Void_String_UIContext_Boolean_0(MyName);
         }
 
         public QuickMenuWingButton AddButton(string text, string tooltip, Action onClick, Sprite sprite = null, bool arrow = true, bool background = true, bool separator = false)
@@ -84,7 +84,7 @@ namespace QuickMenuLib.UI.Elements
         
         public QuickMenuWingMenu AddSubMenu(string text, string tooltip, Sprite image = null, bool button = true)
         {
-            var menu = new QuickMenuWingMenu(text, MyWing._wingType == VRC.UI.Shared.WingType.Left);
+            var menu = new QuickMenuWingMenu(text, MyWing.field_Public_WingPanel_0 == Wing.WingPanel.Left);
             if(button) AddButton(text, tooltip, menu.Open, image);
             return menu;
         }
