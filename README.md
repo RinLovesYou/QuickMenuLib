@@ -9,7 +9,7 @@ A QuickMenu API inspired by UiExpansionKit, and partially based on ReModCE's fir
 ## QuickStart
 
 Download the latest [Release](https://github.com/RinLovesYou/QuickMenuLib/releases) and place it in your `Mods` folder
-then Reference the dll in your project
+then reference the dll in your project
 
 Create a Class that Inherits from ModMenu.
 ```cs
@@ -39,21 +39,21 @@ namespace QuickMenuLibTestMod
         }
         public override void OnWingMenuLeftInitialized()
         {
-            MyLeftWingMenu.AddButton("Test", "Test using PepsiLib!", () =>
+            MyLeftWingMenu.AddButton("Test", "Test using QuickMenuLib!", () =>
             {
                 MelonLogger.Msg("Test Wing Button!");
             });
         } 
-        public override void OnWingMenuRightInitialized()
+        public override void OnWingMenuRightInitialized()pe
         {
-            MyRightWingMenu.AddButton("Test", "Test using PepsiLib!", () =>
+            MyRightWingMenu.AddButton("Test", "Test using QuickMenuLib!", () =>
             {
                 MelonLogger.Msg("Test Wing Button!");
             });
         }
         public override void OnTargetMenuInitialized()
         {
-            MyTargetMenu.AddButton("Test", "Test using PepsiLib!", () =>
+            MyTargetMenu.AddButton("Test", "Test using QuickMenuLib!", () =>
             {
                 MelonLogger.Msg(SelectedUser.prop_String_0);
             });
@@ -70,9 +70,9 @@ Then simply register your custom Mod Menu Class:
         }
 ```
 
-A Look at what PepsiLib provides your Menu with, by looking at the ModMenu Class.
+A Look at what QucikMenuLib provides your Menu with, by looking at the ModMenu Class.
 ```cs
-using PepsiLib.UI.Elements;
+using QuickMenuLib.UI.Elements;
 using VRC.DataModel;
 
 namespace QuickMenuLib
